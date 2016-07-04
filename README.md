@@ -17,9 +17,6 @@ The script :
 		fi
 		
 	
-  For other touchpad devices, try replacing Apl in the second line with the name of the touchpad retrievable by entering 
-  `xinput`
-  in the terminal.
-  Other input devices can also be enabled toggled by this process, by capturing correct output provided by `xinput list`. This will
-  be 
-  functional but will require changing the icon for notification in `icon=...`.
+For other touchpad devices, try replacing Apl in the second line with the name of the touchpad retrievable by entering `xinput` in the terminal.
+Other input devices can also be enabled toggled by this process, by capturing correct output provided by `xinput list`. This will be functional but will require changing the icon for notification in `icon=NEW_ICON_NAME`.
+For ease, add a keyboard shortcut and bind it to `bash filename`
