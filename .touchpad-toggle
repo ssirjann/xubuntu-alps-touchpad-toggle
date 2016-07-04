@@ -1,0 +1,11 @@
+killall notify-osd
+tpid=`xinput list | grep Alp | sed 's/.*id\=\([0-9]\+\).*/\1/g'`
+if [ $(xinput list-props $tpid | grep 'Device Enabled' | awk '{ print $4 }')  -eq 1 ]; then
+	xinput disable $tpid  
+	notify-send "Deactivated" --icon='touchpad-disabled-symbolic'
+
+else
+	killall notify-osd
+	xinput enable $tpid
+	notify-send  "Activated" --icon='input-touchpad-symbolic'
+fi
